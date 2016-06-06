@@ -1,0 +1,31 @@
+<template>
+    <require from="rights.css"></require>
+    <div class="right-container">
+        <div class="right-title-bar">
+            <h3 class="rights-title">${rightsModel.title}</h3>
+            <span class="view-details-checkbox">
+                <input checked.bind="rightsModel.displayDetails" id="viewDetails-${rightsModel.title}" type="checkbox"/><label for="viewDetails-${rightsModel.title}">View details</label> 
+            </span>
+        </div>
+    <div if.bind="rightsModel.displayDetails" class="view-details-section">
+        <span class='during-term' repeat.for="termSplit of rightsModel.termSplits">
+            <input type="radio" name="${rightsModel.title}-term-split" id="${rightsModel.title}-${termSplit.value}" value="${termSplit.value}" checked.bind="termSplit.selected">
+            <label for="${rightsModel.title}-${termSplit.value}">${termSplit.value}</label>
+        </span>
+        <div>
+            <span class="min-width-200">Right granted:</span>
+            <select name="rightGranted">
+                <option></option>
+                <option repeat.for="rightsGrantedOption of rightsModel.rightsGrantedOptions">
+                    ${rightsGrantedOption}
+                </option>
+            </select>
+        </div>
+        <div>
+            <span class="min-width-200">Clause/paragraph number</span>
+            <input type="text"/>
+        </div>
+    </div>
+    
+    </div>
+</template>

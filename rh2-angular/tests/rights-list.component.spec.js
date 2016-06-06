@@ -1,0 +1,1 @@
+//# sourceMappingURL=rights-list.component.spec.js.map

@@ -1,0 +1,29 @@
+<div class="right-container">
+    <div class="right-title-bar">
+        <h3 class="rights-title">{{rightsModel.title}}</h3>
+        <span class="view-details-checkbox">
+            <input [(ngModel)]="rightsModel.displayDetails" id="viewDetails-{{rightsModel.title}}" type="checkbox"/><label htmlFor="viewDetails-{{rightsModel.title}}">View details</label> 
+        </span>
+    </div>
+    <div *ngIf="rightsModel.displayDetails" class="view-details-section">
+        <span class='during-term' *ngFor="let termSplit of rightsModel.termSplits">
+            <input type="radio" name="{{rightsModel.title}}-term-split" id="{{rightsModel.title}}-{{termSplit.value}}" value="{{termSplit.value}}" [(ngModel)]="termSplit.selected">
+            <label htmlFor="{{rightsModel.title}}-{{termSplit.value}}">{{termSplit.value}}</label>
+        </span>
+        
+        <div>
+            <span class="min-width-200">Right granted:</span>
+            <select name="rightGranted">
+                <option></option>
+                <option *ngFor="let rightsGrantedOption of rightsModel.rightsGrantedOptions">
+                    {{rightsGrantedOption}}
+                </option>
+            </select>
+        </div>
+        <div>
+            <span class="min-width-200">Clause/paragraph number</span>
+            <input type="text"/>
+        </div>
+    </div>
+    
+</div>
