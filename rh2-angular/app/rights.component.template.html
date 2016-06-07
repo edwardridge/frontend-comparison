@@ -7,7 +7,7 @@
     </div>
     <div *ngIf="rightsModel.displayDetails" class="view-details-section">
         <span class='during-term' *ngFor="let termSplit of rightsModel.termSplits">
-            <input type="radio" name="{{rightsModel.title}}-term-split" id="{{rightsModel.title}}-{{termSplit.value}}" value="{{termSplit.value}}" [(ngModel)]="termSplit.selected">
+            <input type="radio" [name]="rightsModel.title" id="{{rightsModel.title}}-{{termSplit.value}}" value="{{termSplit.value}}" [(ngModel)]="termSplit.selected">
             <label htmlFor="{{rightsModel.title}}-{{termSplit.value}}">{{termSplit.value}}</label>
         </span>
         
