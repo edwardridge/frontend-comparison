@@ -7,6 +7,5 @@ import { RightsModel} from './rights.model';
     styleUrls: ['./app/rights.component.css']
 })
 export class RightsComponent{
-    @Input()
-    public rightsModel : RightsModel;
+    @Input() public rightsModel : RightsModel;
 }

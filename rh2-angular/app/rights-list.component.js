@@ -17,16 +17,24 @@ var RightsListComponent = (function () {
         var _this = this;
         this.rightsListService = rightsListService;
         this.rightsListRepository = rightsListRepository;
+        this.title = "Hello";
         this.ViewAllDetails = function () {
             _this.rightsListService.OpenAllRights(_this.rightsModels);
         };
-        this.rightsListRepository.GetRightsList().then(function (rightsModels) { return _this.rightsModels = rightsModels; });
+        this.rightsListRepository
+            .GetRightsList()
+            .then(function (rightsModels) { return _this.rightsModels = rightsModels; });
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], RightsListComponent.prototype, "title", void 0);
     RightsListComponent = __decorate([
         core_1.Component({
             selector: 'rights-list',
             templateUrl: './app/rights-list.component.template.html',
             directives: [rights_component_1.RightsComponent],
+            styleUrls: ['./app/rights-list.component.css'],
             providers: [rights_list_service_1.RightsListService, rights_list_repository_1.RightsListRepository]
         }), 
         __metadata('design:paramtypes', [rights_list_service_1.RightsListService, rights_list_repository_1.RightsListRepository])

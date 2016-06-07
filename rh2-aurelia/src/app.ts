@@ -11,5 +11,6 @@ export class App {
         ]);
         
         this.router = router;
+        // this.router.navigate('/general?id=3');
     }
 }

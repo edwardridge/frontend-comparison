@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Routes, ROUTER_DIRECTIVES } from '@angular/router';
-import { RightsComponent, RightsModel } from './rights.component'
+import { RightsComponent } from './rights.component'
+import { RightsModel } from './rights.model'
 import { RightsListComponent } from './rights-list.component'
 import { GeneralComponent } from './general.component'
 

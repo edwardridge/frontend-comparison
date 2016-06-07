@@ -1,6 +1,9 @@
 <template>
     <require from='./rights'></require>
-    <a click.trigger="ViewAllDetails()">View all details</a>
+    <require from='./rights-list.css'></require>
+    
+    <p>${title}</p>
+    <a click.trigger="ViewAllDetails()" class="view-all-details">View all details</a>
     <rights repeat.for="rights of rightsList" rights-model.bind="rights">
     </rights>
 </template>

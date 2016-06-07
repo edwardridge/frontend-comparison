@@ -1,3 +1,4 @@
-<a (click)="ViewAllDetails()" class="margin-top-small display-block">View all details</a>
+<p>{{title}}</p>
+<a (click)="ViewAllDetails()" class="view-all-details">View all details</a>
 <rights *ngFor='let rightsModel of rightsModels' [rightsModel]='rightsModel'>
 </rights>
