@@ -3,13 +3,15 @@ import { RightsModel } from './rights.model'
 import { RightsListService} from './rights-list.service'
 import { RightsListRepository } from './rights-list.repository'
 import { autoinject, bindable } from 'aurelia-framework';
+import { EventAggregator } from 'aurelia-event-aggregator';
 
 @autoinject()
 export class RightsList{
     private rightsList: RightsModel[];
     
     constructor(private rightsListService: RightsListService, 
-                private rightsListRepository : RightsListRepository)
+                private rightsListRepository : RightsListRepository,
+                private ea : EventAggregator)
     {
         this.rightsListRepository
             .GetRightsList()
@@ -20,6 +22,10 @@ export class RightsList{
     
     public ViewAllDetails = () => {
         this.rightsListService.OpenAllRights(this.rightsList);
+    }
+
+    attached(){
+        this.ea.publish('rights-list-loaded');
     }
 }
 
