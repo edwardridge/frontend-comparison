@@ -24,7 +24,7 @@ export class RightsList{
         this.rightsListService.OpenAllRights(this.rightsList);
     }
 
-    attached(){
+    public attached(){
         this.ea.publish('rights-list-loaded');
     }
 }
