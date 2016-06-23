@@ -1,10 +1,17 @@
+
+<div>{{title}}</div>
+
 <div>
-    Contract Title <input type="text" [(ngModel)]="contractTitle"/>
+    Contract Title 
+    <input type="text" 
+        [(ngModel)]="contractTitle"/>
     {{contractTitle}}
 </div>
 
-<p>{{title}}</p>
-<a (click)="ViewAllDetails()" class="view-all-details">View all details</a>
+<a (click)="ViewAllDetails()" 
+    class="view-all-details">View all details</a>
 
-<rights *ngFor='let rightsModel of rightsModels' [rightsModel]='rightsModel'>
+<rights *ngFor='let rightsModel of rightsModels' 
+
+        [rightsModel]='rightsModel'>
 </rights>

@@ -17,7 +17,7 @@ var RightsListComponent = (function () {
         var _this = this;
         this.rightsListService = rightsListService;
         this.rightsListRepository = rightsListRepository;
-        this.title = "Hello";
+        this.title = "Contracts - Angular 2";
         this.ViewAllDetails = function () {
             _this.rightsListService.OpenAllRights(_this.rightsModels);
         };

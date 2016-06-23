@@ -22,7 +22,7 @@ export class RightsListComponent{
             .then((rightsModels) => this.rightsModels = rightsModels);
     }
     
-    @Input() public title: string  = "Hello";
+    @Input() public title: string = "Contracts - Angular 2";
     
     public ViewAllDetails = () => { 
         this.rightsListService.OpenAllRights(this.rightsModels);

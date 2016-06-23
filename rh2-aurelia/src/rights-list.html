@@ -1,15 +1,22 @@
+
 <template>
     <require from='./rights'></require>
     <require from='./rights-list.css'></require>
     
+    <div>${title}</div>
+    
     <div>
-        Contract Title: <input type="text" value.bind="contractTitle"/>
+        Contract Title: 
+        <input type="text" 
+            value.bind="contractTitle"/>
         ${contractTitle}
     </div>
 
-    <p>${title}</p>
-    <a click.trigger="ViewAllDetails()" class="view-all-details">View all details</a>
+    <a click.trigger="ViewAllDetails()" 
+       class="view-all-details">View all details</a>
 
-    <rights repeat.for="rights of rightsList" rights-model.bind="rights">
+    <rights repeat.for="rights of rightsList" 
+    
+            rights-model.bind="rights">
     </rights>
 </template>

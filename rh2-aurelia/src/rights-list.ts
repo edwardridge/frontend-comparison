@@ -18,7 +18,7 @@ export class RightsList{
             .then((rightsList) => this.rightsList = rightsList);
     }
     
-    @bindable public title: string  = "Hello";
+    @bindable public title: string = "Contracts - Aurelia";
     
     public ViewAllDetails = () => {
         this.rightsListService.OpenAllRights(this.rightsList);

@@ -39,3 +39,12 @@ button:disabled {
 .display-block{
     display: block;
 }
+
+div{
+  margin-top: 20px;
+}
+
+a {
+  margin-top: 20px;
+  display: block;
+}

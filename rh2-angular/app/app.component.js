@@ -16,13 +16,10 @@ var AppComponent = (function () {
     function AppComponent(router) {
         this.router = router;
     }
-    AppComponent.prototype.ngOnInit = function () {
-        this.router.navigate(['/general', 1]);
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'ripi',
-            template: "\n    <div>Angular 2</div>\n   <div>\n    <a [routerLink]=\"['/general/2']\" class=\"btn btn-default\">General</a>\n    <a [routerLink]=\"['/rights']\" class=\"btn btn-default\">Rights</a>\n   </div>\n   <router-outlet></router-outlet>\n    ",
+            templateUrl: './app/app.component.template.html',
             directives: [router_1.ROUTER_DIRECTIVES, rights_list_component_1.RightsListComponent, general_component_1.GeneralComponent]
         }),
         router_1.Routes([
